@@ -1,5 +1,5 @@
 ### IntelliJ IDEA ###
-out/
+out_load/
 !**/src/main/**/out/
 !**/src/test/**/out/
 

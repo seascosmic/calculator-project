@@ -1,15 +1,16 @@
-import java.util.Locale;
+package com.calculatorapp;
+
 import java.util.Scanner;
 
 public class Main {
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         Scanner user = new Scanner(System.in);
         boolean continueLoop = true;
 
         System.out.println("DO A CALCULATION!");
 
-    while (continueLoop) {
+        while (continueLoop) {
             System.out.println("Enter the first number: ");
             double numberOne = user.nextDouble();
             System.out.println("Enter the second number: ");
@@ -19,17 +20,25 @@ public class Main {
             double result;
 
             switch (operator) {
-                case '+' : result = numberOne + numberTwo; break;
-                case '-' : result = numberOne - numberTwo; break;
-                case '*' : result = numberOne * numberTwo; break;
-                case '/' : result = numberOne / numberTwo;
-                    if (numberTwo != 0 ) {
-                        result = numberOne / numberTwo; }
-                    else {
+                case '+':
+                    result = numberOne + numberTwo;
+                    break;
+                case '-':
+                    result = numberOne - numberTwo;
+                    break;
+                case '*':
+                    result = numberOne * numberTwo;
+                    break;
+                case '/':
+                    result = numberOne / numberTwo;
+                    if (numberTwo != 0) {
+                        result = numberOne / numberTwo;
+                    } else {
                         System.out.println("Error: Cannot divide by zero!");
                         continue;
-                    } break;
-                    default:
+                    }
+                    break;
+                default:
                     System.out.println("Invalid Operation");
                     continue;
             }
